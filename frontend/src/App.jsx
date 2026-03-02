@@ -1,8 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Settings from "./pages/settings";
+
 function App(){
     return(
-        <div>
-            <h1>Smart Attachment System</h1>
-        </div>
+        <BrowserRouter>
+            <Routes>
+
+                <Route path="/" element={<Home/>} />
+                <Route path="/settings" element={<Settings/>} />
+
+            </Routes>
+        </BrowserRouter>
     );
 }
 
